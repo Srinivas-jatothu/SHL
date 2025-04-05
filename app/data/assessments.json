@@ -1,0 +1,202 @@
+[
+    {
+      "id": "verify-interactive",
+      "name": "Verify Interactive",
+      "url": "https://www.shl.com/solutions/products/verify-interactive/",
+      "remote_testing_support": true,
+      "adaptive_irt_support": true,
+      "duration": "10-15 minutes",
+      "test_type": "Cognitive ability assessment",
+      "description": "A comprehensive interactive assessment that measures general cognitive ability through engaging, puzzle-like problems."
+    },
+    {
+      "id": "verify-numerical",
+      "name": "Verify Numerical Reasoning",
+      "url": "https://www.shl.com/solutions/products/verify-numerical-reasoning/",
+      "remote_testing_support": true,
+      "adaptive_irt_support": true,
+      "duration": "18 minutes",
+      "test_type": "Numerical reasoning",
+      "description": "Assesses a candidate's ability to analyze and interpret numerical data, tables, and charts to make business decisions."
+    },
+    {
+      "id": "verify-verbal",
+      "name": "Verify Verbal Reasoning",
+      "url": "https://www.shl.com/solutions/products/verify-verbal-reasoning/",
+      "remote_testing_support": true,
+      "adaptive_irt_support": true,
+      "duration": "17 minutes",
+      "test_type": "Verbal reasoning",
+      "description": "Evaluates a candidate's ability to understand and analyze written information to draw accurate conclusions."
+    },
+    {
+      "id": "verify-logical",
+      "name": "Verify Logical Reasoning",
+      "url": "https://www.shl.com/solutions/products/verify-logical-reasoning/",
+      "remote_testing_support": true,
+      "adaptive_irt_support": true,
+      "duration": "25 minutes",
+      "test_type": "Deductive logical reasoning",
+      "description": "Measures a candidate's ability to draw logical conclusions based on given information and identify patterns."
+    },
+    {
+      "id": "verify-spatial",
+      "name": "Verify Spatial Reasoning",
+      "url": "https://www.shl.com/solutions/products/verify-spatial-reasoning/",
+      "remote_testing_support": true,
+      "adaptive_irt_support": true,
+      "duration": "12 minutes",
+      "test_type": "Spatial reasoning",
+      "description": "Assesses a candidate's ability to visualize, manipulate, and reason with three-dimensional objects."
+    },
+    {
+      "id": "verify-mechanical",
+      "name": "Verify Mechanical Reasoning",
+      "url": "https://www.shl.com/solutions/products/verify-mechanical-reasoning/",
+      "remote_testing_support": true,
+      "adaptive_irt_support": false,
+      "duration": "25 minutes",
+      "test_type": "Mechanical comprehension",
+      "description": "Evaluates a candidate's understanding of mechanical principles, physical forces, and their applications."
+    },
+    {
+      "id": "verify-gc",
+      "name": "Verify G+ C",
+      "url": "https://www.shl.com/solutions/products/verify-g-c/",
+      "remote_testing_support": true,
+      "adaptive_irt_support": true,
+      "duration": "24 minutes",
+      "test_type": "General cognitive ability",
+      "description": "A comprehensive assessment of general intelligence that combines verbal, numerical, and abstract reasoning."
+    },
+    {
+      "id": "opq",
+      "name": "Occupational Personality Questionnaire (OPQ)",
+      "url": "https://www.shl.com/solutions/products/occupational-personality-questionnaire/",
+      "remote_testing_support": true,
+      "adaptive_irt_support": false,
+      "duration": "25-40 minutes",
+      "test_type": "Personality assessment",
+      "description": "Provides insights into a candidate's preferred behavioral style at work and likely fit with organizational culture."
+    },
+    {
+      "id": "sjt",
+      "name": "Situational Judgement Test",
+      "url": "https://www.shl.com/solutions/products/situational-judgement-test/",
+      "remote_testing_support": true,
+      "adaptive_irt_support": false,
+      "duration": "30 minutes",
+      "test_type": "Situational judgment",
+      "description": "Assesses how candidates would handle typical workplace scenarios, providing insights into their judgment and decision-making."
+    },
+    {
+      "id": "mq",
+      "name": "Motivation Questionnaire (MQ)",
+      "url": "https://www.shl.com/solutions/products/motivation-questionnaire/",
+      "remote_testing_support": true,
+      "adaptive_irt_support": false,
+      "duration": "25 minutes",
+      "test_type": "Motivation assessment",
+      "description": "Evaluates what drives and motivates a candidate in the workplace, helping predict engagement and retention."
+    },
+    {
+      "id": "remote-monitoring",
+      "name": "Remote Assessment Monitoring",
+      "url": "https://www.shl.com/solutions/products/remote-assessment-monitoring/",
+      "remote_testing_support": true,
+      "adaptive_irt_support": false,
+      "duration": "Varies",
+      "test_type": "Remote monitoring solution",
+      "description": "Provides secure remote proctoring for assessments, ensuring test integrity in remote settings."
+    },
+    {
+      "id": "coding-simulator",
+      "name": "Coding Simulator",
+      "url": "https://www.shl.com/solutions/products/coding-simulator/",
+      "remote_testing_support": true,
+      "adaptive_irt_support": false,
+      "duration": "30-60 minutes",
+      "test_type": "Programming skills assessment",
+      "description": "Evaluates a candidate's programming skills through realistic coding challenges in multiple languages."
+    },
+    {
+      "id": "sales-assessment",
+      "name": "Sales Assessment",
+      "url": "https://www.shl.com/solutions/products/sales-assessment/",
+      "remote_testing_support": true,
+      "adaptive_irt_support": false,
+      "duration": "35 minutes",
+      "test_type": "Sales capability assessment",
+      "description": "Measures a candidate's sales aptitude, including prospecting, relationship building, and closing abilities."
+    },
+    {
+      "id": "customer-service",
+      "name": "Customer Service Assessment",
+      "url": "https://www.shl.com/solutions/products/customer-service-assessment/",
+      "remote_testing_support": true,
+      "adaptive_irt_support": false,
+      "duration": "35 minutes",
+      "test_type": "Customer service capability assessment",
+      "description": "Evaluates a candidate's customer service orientation, problem-solving abilities, and communication skills."
+    },
+    {
+      "id": "call-center",
+      "name": "Call Center Assessment",
+      "url": "https://www.shl.com/solutions/products/call-center-assessment/",
+      "remote_testing_support": true,
+      "adaptive_irt_support": false,
+      "duration": "35 minutes",
+      "test_type": "Call center skills assessment",
+      "description": "Assesses a candidate's abilities to handle customer calls, multitask, and resolve issues efficiently."
+    },
+    {
+      "id": "leadership",
+      "name": "Leadership Assessment",
+      "url": "https://www.shl.com/solutions/products/leadership-assessment/",
+      "remote_testing_support": true,
+      "adaptive_irt_support": false,
+      "duration": "45 minutes",
+      "test_type": "Leadership potential assessment",
+      "description": "Evaluates a candidate's leadership potential, including decision-making, team management, and strategic thinking."
+    },
+    {
+      "id": "digital-skills",
+      "name": "Digital Skills Assessment",
+      "url": "https://www.shl.com/solutions/products/digital-skills-assessment/",
+      "remote_testing_support": true,
+      "adaptive_irt_support": false,
+      "duration": "30 minutes",
+      "test_type": "Digital literacy assessment",
+      "description": "Assesses a candidate's proficiency with digital tools, technology concepts, and digital problem-solving."
+    },
+    {
+      "id": "microsoft-office",
+      "name": "Microsoft Office Assessment",
+      "url": "https://www.shl.com/solutions/products/microsoft-office-assessment/",
+      "remote_testing_support": true,
+      "adaptive_irt_support": false,
+      "duration": "40 minutes",
+      "test_type": "Microsoft Office proficiency",
+      "description": "Evaluates a candidate's proficiency with Microsoft Office applications including Excel, Word, and PowerPoint."
+    },
+    {
+      "id": "talent-assessment",
+      "name": "Talent Assessment",
+      "url": "https://www.shl.com/solutions/products/talent-assessment/",
+      "remote_testing_support": true,
+      "adaptive_irt_support": false,
+      "duration": "Variable",
+      "test_type": "Comprehensive talent assessment",
+      "description": "A holistic assessment that combines cognitive, behavioral, and skills evaluations for a complete candidate profile."
+    },
+    {
+      "id": "workplace-behavior",
+      "name": "Workplace Behavior Assessment",
+      "url": "https://www.shl.com/solutions/products/workplace-behavior-assessment/",
+      "remote_testing_support": true,
+      "adaptive_irt_support": false,
+      "duration": "30 minutes",
+      "test_type": "Workplace behavior and ethics",
+      "description": "Assesses a candidate's understanding of workplace ethics, integrity, and professional conduct."
+    }
+  ]

@@ -1,0 +1,162 @@
+/* static/css/styles.css */
+:root {
+    --primary-color: #0066cc;
+    --primary-light: #e6f0fa;
+    --primary-dark: #004d99;
+    --secondary-color: #f4f6f8;
+    --text-color: #333333;
+    --light-text: #666666;
+    --border-color: #dddddd;
+    --success-color: #2ecc71;
+    --warning-color: #f39c12;
+    --error-color: #e74c3c;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    color: var(--text-color);
+    background-color: #f9f9f9;
+}
+
+/* Header styles */
+header h1 {
+    color: var(--primary-color);
+}
+
+/* Card styles */
+.card {
+    border-radius: 10px;
+    border: none;
+    overflow: hidden;
+}
+
+.card-header {
+    border-bottom: none;
+}
+
+/* Form styles */
+.form-control {
+    padding: 12px;
+    border-radius: 6px;
+}
+
+.form-control:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 0.2rem rgba(0, 102, 204, 0.25);
+}
+
+textarea.form-control {
+    min-height: 200px;
+}
+
+/* Button styles */
+.btn-primary {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+    padding: 10px 20px;
+    font-weight: 500;
+}
+
+.btn-primary:hover, .btn-primary:focus {
+    background-color: var(--primary-dark);
+    border-color: var(--primary-dark);
+}
+
+.btn-outline-primary {
+    color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+.btn-outline-primary:hover {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+/* Step circles */
+.step-circle {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: var(--primary-color);
+    color: white;
+    font-weight: bold;
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+/* Table styles */
+.table th {
+    font-weight: 500;
+    background-color: var(--primary-light);
+    color: var(--primary-dark);
+}
+
+.clickable-row {
+    cursor: pointer;
+}
+
+.clickable-row:hover {
+    background-color: var(--secondary-color);
+}
+
+.explanation-content {
+    border-left: 4px solid var(--primary-color);
+}
+
+/* Responsive table */
+@media (max-width: 767.98px) {
+    .table-responsive {
+        font-size: 0.9rem;
+    }
+}
+
+/* Job description styling */
+.job-text {
+    max-height: 200px;
+    overflow-y: auto;
+}
+
+.full-job-text {
+    max-height: none;
+}
+
+/* Loading indicator */
+.loader {
+    border: 5px solid rgba(0, 102, 204, 0.3);
+    border-radius: 50%;
+    border-top: 5px solid var(--primary-color);
+    width: 50px;
+    height: 50px;
+    animation: spin 1s linear infinite;
+    margin: 20px auto;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Nav tabs styling */
+.nav-tabs .nav-link {
+    color: var(--light-text);
+    border: none;
+    padding: 10px 20px;
+}
+
+.nav-tabs .nav-link.active {
+    color: var(--primary-color);
+    border-bottom: 3px solid var(--primary-color);
+    font-weight: 500;
+}
+
+.nav-tabs .nav-link:hover:not(.active) {
+    border-bottom: 3px solid var(--border-color);
+}
+
+/* Footer */
+footer {
+    border-top: 1px solid var(--border-color);
+}

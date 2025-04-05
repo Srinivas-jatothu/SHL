@@ -1,0 +1,122 @@
+<!-- templates/recommendations.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assessment Recommendations - SHL Assessment Recommender</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', path='/css/styles.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header class="mt-4 mb-5 text-center">
+            <h1 class="display-4 text-primary">SHL Assessment Recommender</h1>
+            <p class="lead text-secondary">Recommended assessments for your job description</p>
+        </header>
+
+        <div class="row justify-content-center">
+            <div class="col-lg-12">
+                <div class="card shadow-sm mb-4">
+                    <div class="card-body p-4">
+                        <h4 class="card-title mb-3">Job Description Analysis</h4>
+                        <div class="job-text p-3 bg-light rounded mb-3">
+                            <p class="mb-0">{{ job_text|truncate(500) }}</p>
+                            {% if job_text|length > 500 %}
+                                <button class="btn btn-sm btn-link" id="showMoreBtn">Show more</button>
+                                <div class="full-job-text d-none">
+                                    <p>{{ job_text }}</p>
+                                </div>
+                            {% endif %}
+                        </div>
+                        <div class="text-end">
+                            <a href="/" class="btn btn-outline-primary">Try Another Job</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card shadow-sm mb-5">
+                    <div class="card-header bg-primary text-white py-3">
+                        <h4 class="card-title mb-0">Recommended Assessments</h4>
+                    </div>
+                    <div class="card-body p-0">
+                        <div class="table-responsive">
+                            <table class="table table-hover mb-0">
+                                <thead>
+                                    <tr>
+                                        <th class="ps-4">Assessment</th>
+                                        <th>Test Type</th>
+                                        <th>Duration</th>
+                                        <th>Remote Testing</th>
+                                        <th class="pe-4">Adaptive/IRT</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    {% for rec in recommendations %}
+                                    <tr data-bs-toggle="collapse" data-bs-target="#collapse{{ loop.index }}" aria-expanded="false" class="clickable-row">
+                                        <td class="ps-4">
+                                            <a href="{{ rec.assessment.url }}" target="_blank" class="text-decoration-none fw-bold">
+                                                {{ rec.assessment.name }}
+                                            </a>
+                                        </td>
+                                        <td>{{ rec.assessment.test_type }}</td>
+                                        <td>{{ rec.assessment.duration }}</td>
+                                        <td>{% if rec.assessment.remote_testing_support %}Yes{% else %}No{% endif %}</td>
+                                        <td class="pe-4">{% if rec.assessment.adaptive_irt_support %}Yes{% else %}No{% endif %}</td>
+                                    </tr>
+                                    <tr class="explanation-row">
+                                        <td colspan="5" class="p-0 border-top-0">
+                                            <div id="collapse{{ loop.index }}" class="collapse">
+                                                <div class="explanation-content p-4 bg-light">
+                                                    <h6 class="mb-2 fw-bold">Why this assessment is recommended:</h6>
+                                                    <p class="mb-0">{{ rec.relevance_explanation }}</p>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    {% endfor %}
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card shadow-sm mb-4">
+                    <div class="card-body p-4">
+                        <h4 class="card-title mb-3">Next Steps</h4>
+                        <p>Click on any assessment name to learn more about it on the SHL website. You can also:</p>
+                        <ul>
+                            <li>Click on a table row to see why an assessment was recommended</li>
+                            <li>Compare multiple assessments to create a comprehensive testing strategy</li>
+                            <li>Contact SHL directly to implement these assessments in your hiring process</li>
+                        </ul>
+                        <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                            <a href="/" class="btn btn-outline-primary">Try Another Job Description</a>
+                            <a href="https://www.shl.com/contact/" target="_blank" class="btn btn-primary">Contact SHL</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="bg-light py-4 mt-4">
+        <div class="container text-center text-muted">
+            <p>SHL Assessment Recommender &copy; 2025</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Show more job description text
+        const showMoreBtn = document.getElementById('showMoreBtn');
+        if (showMoreBtn) {
+            showMoreBtn.addEventListener('click', function() {
+                document.querySelector('.full-job-text').classList.remove('d-none');
+                this.classList.add('d-none');
+            });
+        }
+    </script>
+</body>
+</html>
