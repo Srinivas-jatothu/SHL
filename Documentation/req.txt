@@ -1,0 +1,132 @@
+# SHL Assessment Recommender: Requirements & Implementation Flow
+
+## Requirements List
+
+### Functional Requirements
+
+1. **Input Handling**
+   - Accept natural language job descriptions via direct text input
+   - Accept job description URLs for remote fetching
+   - Support Unicode text input to handle international job postings
+
+2. **Assessment Matching System**
+   - Match job descriptions to relevant SHL assessments
+   - Score and rank assessments based on relevance
+   - Return 1-10 most appropriate test solutions
+   - Ensure recommendations are contextually appropriate
+
+3. **Output Requirements**
+   - Display results in a tabular format
+   - Show assessment name (linked to SHL catalog)
+   - Show remote testing support status (Yes/No)
+   - Show adaptive/IRT support status (Yes/No)
+   - Show test duration
+   - Show test type
+   - Link each assessment to its corresponding URL in SHL's catalog
+
+4. **User Interface**
+   - Clean, intuitive interface
+   - Toggle between text input and URL input methods
+   - Responsive design for desktop and mobile devices
+   - Loading indicator during processing
+   - Error handling for invalid inputs
+
+### Non-Functional Requirements
+
+1. **Performance**
+   - Response time under 3 seconds for text inputs
+   - Response time under 5 seconds for URL scraping
+
+2. **Scalability**
+   - Handle multiple concurrent users
+   - Support future expansion of SHL's assessment catalog
+
+3. **Maintainability**
+   - Modular code structure
+   - Easily updatable assessment database
+   - Documentation for each component
+
+4. **Security**
+   - Secure handling of job description data
+   - Input validation to prevent injection attacks
+   - Safe URL handling
+
+## Implementation Flow
+
+### Phase 1: Data Preparation & Analysis
+1. **Research and Data Collection**
+   - Analyze SHL's product catalog structure
+   - Identify all individual test solutions
+   - Document attributes for each assessment (duration, type, support features)
+   - Create structured dataset of SHL assessments
+
+2. **Keyword & Taxonomy Development**
+   - Create keyword sets for each assessment type
+   - Develop role-to-assessment mappings
+   - Build industry-specific assessment recommendations
+   - Identify key skills and their corresponding assessments
+
+### Phase 2: Algorithm Development
+1. **Matching Algorithm Design**
+   - Develop natural language processing approach
+   - Create scoring mechanism for assessment relevance
+   - Design weighting system for context-specific keywords
+   - Implement ranking algorithm
+
+2. **URL Processing System**
+   - Create job description extraction from URLs
+   - Handle various website structures
+   - Implement text cleaning and normalization
+
+3. **Testing & Refinement**
+   - Test with diverse job descriptions
+   - Validate recommendations against expert expectations
+   - Refine algorithm based on accuracy metrics
+   - Optimize for edge cases
+
+### Phase 3: Frontend Development
+1. **UI/UX Design**
+   - Design wireframes for web application
+   - Create mockups of user interface
+   - Plan responsive layouts
+
+2. **Web Application Development**
+   - Implement user interface components
+   - Create input handling system
+   - Build results display table
+   - Add interactive elements
+
+3. **Integration**
+   - Connect frontend to recommendation algorithm
+   - Implement loading states and error handling
+   - Test end-to-end functionality
+
+### Phase 4: Deployment & Evaluation
+1. **Deployment**
+   - Set up hosting environment
+   - Deploy web application
+   - Configure monitoring
+
+2. **Evaluation & Improvement**
+   - Gather user feedback
+   - Analyze usage patterns
+   - Implement improvements
+   - Update assessment database as SHL catalog changes
+
+## User Flow
+
+1. User navigates to the Assessment Recommender web application
+2. User selects input method (text or URL)
+3. For text input:
+   - User enters or pastes job description
+   - User clicks "Find Assessments" button
+4. For URL input:
+   - User enters job posting URL
+   - User clicks "Find Assessments" button
+5. System processes input and analyzes content
+6. System matches job requirements against assessment database
+7. System displays ranked recommendations in a table
+8. User can click on assessment names to visit SHL catalog pages
+9. User can modify input and search again as needed
+
+This approach ensures a systematic development process that focuses on accuracy, usability, and maintainability of the Assessment Recommender system.
